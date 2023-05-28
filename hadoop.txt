@@ -1,0 +1,12 @@
+gedit inl.txt
+cd hadoop-3.3.5/
+cd sbin
+start-dfs.sh
+start-yarn.sh
+jps
+hdfs dfs -mkdir /inl2
+hadoop fs -put /home/hadoop/inl.txt /inl2
+yarn jar
+/home/hadoop/hadoop-3.3.5/share/hadoop/mapreduce/hadoop-mapreduce-examples-3.3.5.jar
+wordcount /gf /o5
+hdfs dfs -cat /o5/part-r-00000
